@@ -29,11 +29,11 @@
 ## Docker
 Сборка образа для докер контейнера производится следующей командой:
 
-    docker build -t danil328/antispoof .
+    docker build -t danil328/antispoofing .
 
 Создание контейнера и запуск:
 
-    nvidia-docker run -v 'test_dir':/test -v 'output_dir':/output -it danil328/antispoof /bin/bash
+    nvidia-docker run -v 'test_dir':/test -v 'output_dir':/output -it danil328/antispoofing /bin/bash
     
 Клонирование репозитория и запуск predict:
 
