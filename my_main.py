@@ -50,9 +50,9 @@ def load_weights():
     print('load weights ...')
     gdown.download('https://drive.google.com/uc?id=15TKOlGEgk-3m6R8TeMzFxn_RQzwB6hjM', os.path.join(path_models, 'model_1.h5'), quiet=True)
     gdown.download('https://drive.google.com/uc?id=1bhLypjl0BNtaFSjOLlICO0ecCkZ-rNKF', os.path.join(path_models, 'model_2.h5'), quiet=True)
-    #gdown.download('https://drive.google.com/uc?id=1hrkhV4JdN_JpHkkxpGnBVGeBzKLnBRMz', os.path.join(path_models, 'model_3.h5'), quiet=True)
-    #gdown.download('https://drive.google.com/uc?id=1Giv-wG23AqZ9IEnwfDUJlHULPn7Tsb8C', os.path.join(path_models, 'model_4.h5'), quiet=True)
-    #gdown.download('https://drive.google.com/uc?id=1-82xRiQCGyzIeO4krbPtxvRde-s4fo-b', os.path.join(path_models, 'model_5.h5'), quiet=True)
+    gdown.download('https://drive.google.com/uc?id=1hrkhV4JdN_JpHkkxpGnBVGeBzKLnBRMz', os.path.join(path_models, 'model_3.h5'), quiet=True)
+    gdown.download('https://drive.google.com/uc?id=1Giv-wG23AqZ9IEnwfDUJlHULPn7Tsb8C', os.path.join(path_models, 'model_4.h5'), quiet=True)
+    gdown.download('https://drive.google.com/uc?id=1-82xRiQCGyzIeO4krbPtxvRde-s4fo-b', os.path.join(path_models, 'model_5.h5'), quiet=True)
 
 def predict(model, test_df, model_name):
     print('predict ...')
@@ -99,5 +99,5 @@ if __name__ == '__main__':
 
     kaggle_bag(tmp_predict + "/model*.csv", os.path.join(path_submission, 'submission1.csv'))
     os.remove("model1.txt")
-    #os.remove("model5.txt")
+    os.remove("model5.txt")
     kaggle_bag(tmp_predict + "/model*.csv", os.path.join(path_submission, 'submission2.csv'))
