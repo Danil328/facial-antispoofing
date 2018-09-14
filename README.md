@@ -30,6 +30,10 @@
 Сборка образа для докер контейнера производится следующей командой:
 
     docker build -t danil328/antispoofing .
+    
+Или:
+
+    docker pull danil328/antispoofing
 
 Создание контейнера и запуск:
 
