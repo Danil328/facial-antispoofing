@@ -36,6 +36,7 @@
     nvidia-docker run -v 'test_dir':/test -v 'output_dir':/output -it danil328/antispoof /bin/bash
     
 Клонирование репозитория и запуск predict:
+
     git clone https://gitlab.com/Danil328/facial-antispoofing
     cd facial-antispoofing
     python my_main.py
