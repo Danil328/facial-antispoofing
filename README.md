@@ -30,10 +30,12 @@
 Сборка образа для докер контейнера производится следующей командой:
 
     docker build -t winner/container:1.0 .
+    docker build -t danil328/antispoof .
 
 Создание контейнера и запуск:
 
     docker run -v <train_dir>:/train -v <val_dir>:/validation -v <test_dir>:/test -v <output_dir>:/output -v $(pwd):/src/notebooks -it winner/container:1.0
+    docker run -v 'test_dir':/test -v 'output_dir':/output -it danil328/antispoof
 
 **Точки монтирования /test и /output - обязательны для оценки решений. Формат выходного решения представлен в примере.**
 
