@@ -48,7 +48,7 @@ def f1(y_true, y_pred):
 
 def load_weights():
     print('load weights ...')
-    gdown.download('https://drive.google.com/uc?id=15TKOlGEgk-3m6R8TeMzFxn_RQzwB6hjM', os.path.join(path_models, 'model_1.h5'), quiet=True)
+    #gdown.download('https://drive.google.com/uc?id=15TKOlGEgk-3m6R8TeMzFxn_RQzwB6hjM', os.path.join(path_models, 'model_1.h5'), quiet=True)
     #gdown.download('https://drive.google.com/uc?id=1bhLypjl0BNtaFSjOLlICO0ecCkZ-rNKF', os.path.join(path_models, 'model_2.h5'), quiet=True)
     #gdown.download('https://drive.google.com/uc?id=1hrkhV4JdN_JpHkkxpGnBVGeBzKLnBRMz', os.path.join(path_models, 'model_3.h5'), quiet=True)
     #gdown.download('https://drive.google.com/uc?id=1Giv-wG23AqZ9IEnwfDUJlHULPn7Tsb8C', os.path.join(path_models, 'model_4.h5'), quiet=True)
