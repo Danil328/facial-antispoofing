@@ -85,7 +85,7 @@ if __name__ == '__main__':
     test_df = pd.DataFrame()
     test_df['path'] = test_filelist
 
-    for model_name in os.listdir(path_models):
+    for model_name in glob.glob(os.path.join(path_models, '*.h5')):
         try:
             del model
         except Exception:
@@ -94,8 +94,8 @@ if __name__ == '__main__':
         K.clear_session()
 
         print(model_name)
-        model = load_model(os.path.join(path_models, model_name), custom_objects={'auc': auc, 'f1': f1})
-        predict(model, test_df.copy(), model_name)
+        model = load_model(model_name, custom_objects={'auc': auc, 'f1': f1})
+        predict(model, test_df.copy(), model_name.split('/')[-1])
 
     kaggle_bag(tmp_predict + "/model*.csv", os.path.join(path_submission, 'submission1.csv'))
     #os.remove("model1.txt")
