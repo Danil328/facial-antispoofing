@@ -84,7 +84,7 @@ def predict(model, test_df, model_name):
     test_df[2] = pred3
     test_df.to_csv(os.path.join(tmp_predict, 'temp_3.csv'), index=False)
 
-    kaggle_bag(tmp_predict + 'temp_*.csv', os.path.join(path_submission, model_name.split('.')[0] + '.csv'))
+    kaggle_bag(tmp_predict + 'temp_*.csv', os.path.join(tmp_predict, model_name.split('.')[0] + '.csv'))
 
 path_models = 'models'
 path_test = '/test'
