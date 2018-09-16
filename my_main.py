@@ -122,7 +122,7 @@ if __name__ == '__main__':
         predict(model, test_df.copy(), model_name.split('/')[-1])
 
     kaggle_bag(tmp_predict + "/model*.csv", os.path.join(path_submission, 'submission1.csv'))
-    os.remove(tmp_predict + "model_1.csv")
+    os.remove(tmp_predict + "/model_1.csv")
     kaggle_bag(tmp_predict + "/model*.csv", os.path.join(path_submission, 'submission2.csv'))
-    os.remove(tmp_predict + "model_5.csv")
+    os.remove(tmp_predict + "/model_5.csv")
     kaggle_bag(tmp_predict + "/model*.csv", os.path.join(path_submission, 'submission3.csv'))
