@@ -60,20 +60,25 @@ def predict(model, test_df, model_name):
     pred1 = []
     pred2 = []
     pred3 = []
+    pred4 = []
     for img in test_df['path']:
         image1 = imread(img)
         image2 = np.fliplr(imread(img))
         image3 = np.flipud(imread(img))
+        image4 = np.flipud(image2)
 
         image1 = resize(image1, (img_rows, img_cols, 3))
         image2 = resize(image2, (img_rows, img_cols, 3))
         image3 = resize(image3, (img_rows, img_cols, 3))
+        image4 = resize(image4, (img_rows, img_cols, 3))
 
         pred1.append(model.predict(image1.reshape((1, image1.shape[0], image1.shape[1], image1.shape[2])))[0][0])
         pred2.append(model.predict(image2.reshape((1, image2.shape[0], image2.shape[1], image2.shape[2])))[0][0])
         pred3.append(model.predict(image3.reshape((1, image3.shape[0], image3.shape[1], image3.shape[2])))[0][0])
+        pred4.append(model.predict(image4.reshape((1, image4.shape[0], image4.shape[1], image4.shape[2])))[0][0])
 
     test_df['path'] = [*map(lambda x: x.split('/')[2], test_filelist)]
+    
     test_df['pred'] = pred1
     test_df.columns = [0, 2]
     test_df.to_csv(os.path.join(tmp_predict, 'temp_1.csv'), index=False)
@@ -83,6 +88,9 @@ def predict(model, test_df, model_name):
 
     test_df[2] = pred3
     test_df.to_csv(os.path.join(tmp_predict, 'temp_3.csv'), index=False)
+    
+    test_df[2] = pred4
+    test_df.to_csv(os.path.join(tmp_predict, 'temp_4.csv'), index=False)
 
     kaggle_bag(tmp_predict + 'temp_*.csv', os.path.join(tmp_predict, model_name.split('.')[0] + '.csv'))
 
