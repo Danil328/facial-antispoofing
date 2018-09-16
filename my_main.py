@@ -123,5 +123,6 @@ if __name__ == '__main__':
 
     kaggle_bag(tmp_predict + "/model*.csv", os.path.join(path_submission, 'submission1.csv'))
     os.remove(tmp_predict + "model_1.csv")
-    os.remove(tmp_predict + "model_5.csv")
     kaggle_bag(tmp_predict + "/model*.csv", os.path.join(path_submission, 'submission2.csv'))
+    os.remove(tmp_predict + "model_5.csv")
+    kaggle_bag(tmp_predict + "/model*.csv", os.path.join(path_submission, 'submission3.csv'))
