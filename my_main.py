@@ -63,8 +63,8 @@ def predict(model, test_df, model_name):
     pred4 = []
     for img in test_df['path']:
         image1 = imread(img)
-        image2 = np.fliplr(imread(img))
-        image3 = np.flipud(imread(img))
+        image2 = np.fliplr(image1)
+        image3 = np.flipud(image1)
         image4 = np.flipud(image2)
 
         image1 = resize(image1, (img_rows, img_cols, 3))
