@@ -73,8 +73,9 @@ RUN apt-get clean && \
 # Environment Variables
 ENV LD_LIBRARY_PATH /usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
 
+COPY ./ /root
 VOLUME /output
 VOLUME /test
 
-CMD ["python", "main.py"]
+CMD cd /root && python my_main.py
 
