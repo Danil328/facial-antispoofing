@@ -38,6 +38,8 @@
 Создание контейнера и запуск:
 
     nvidia-docker run -v 'test_dir':/test -v 'output_dir':/output -it danil328/antispoofing /bin/bash
+    nvidia-docker run --mount src="/test",target=/test,type=bind -v 'output_dir':/output -it danil328/antispoofing /bin/bash 
+
     
 Клонирование репозитория и запуск predict:
 
