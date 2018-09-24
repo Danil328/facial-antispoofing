@@ -8,13 +8,13 @@
 Атаки повторного воспроизведения получены путем съемки экранов различных ноутбуков и мониторов (120 шт) камерами мобильных телефонов (111 шт) в момент проигравания оригинальных видеозаписей различных персон (115 чел), полученных с помощью различных устройств видеосъемки (12 шт).
 Атаки были получены как в лабораторных условиях, так и с помощью исполнителей, зарегистрированных в краудсорсинговых интернет-сервисах Яндекс.Толока и Amazon Mechanical Turk.
 
-## Структура IDRND_FASDB
-| Base        | Category           | Images  |
-| ------------- |:-------------:| -----:|
-| IDRND_FASDB_train | real | 1223 |
-| IDRND_FASDB_train | spoof | 7076 |
-| IDRND_FASDB_val | real | 373 |
-| IDRND_FASDB_val | spoof | 632 |
+## Model weights
+    https://drive.google.com/uc?id=15TKOlGEgk-3m6R8TeMzFxn_RQzwB6hjM
+    https://drive.google.com/uc?id=1bhLypjl0BNtaFSjOLlICO0ecCkZ-rNKF
+    https://drive.google.com/uc?id=1hrkhV4JdN_JpHkkxpGnBVGeBzKLnBRMz
+    https://drive.google.com/uc?id=1Giv-wG23AqZ9IEnwfDUJlHULPn7Tsb8C
+    https://drive.google.com/uc?id=1-82xRiQCGyzIeO4krbPtxvRde-s4fo-b
+
 
 Имена файлов из _train:
 
